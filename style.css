@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&family=Nunito:wght@300;400;500;600;700;800&family=Paytone+One&isplay=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Reem+Kufi+Ink&family=Rubik+Dirt&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex; align-items: center; justify-content: center;
+    background-color: black;
+}
+.container {
+    height: 500px;
+    width: 90vw;
+    /* overflow: hidden; */
+    position: relative;
+}    
+.container .darkening {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 90vw;
+    position: absolute;
+    z-index: 1;
+}
+.outer-img {
+    height: 100%;
+    width: 90vw;
+}
+.outer-img > div {
+    height: 100%;
+    width: 90vw;
+    position: absolute;
+    opacity: 0;
+    transition: all .5s ease;
+}
+.outer-img > div.active {
+    opacity: 1;
+}
+.inner-img {
+    height: 70%;
+    width: 80%;
+    position: absolute;
+    top: 15%; 
+    left: 10%;
+    overflow: hidden;
+    z-index: 3;
+}
+.inner-img > div {
+    height: 500px;
+    width: 90vw;
+    position: absolute;
+    transform: translate(-100%, -150%);
+    opacity: 0;
+    transition: all .5s ease;
+}
+.inner-img > div.active {
+    opacity: 1;
+    transform: translate(-10%, -15%);
+}
+
+.outer-img > div, .inner-img > div {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.inner-img .one {
+    background-image: url(/img/danny-jongerius-uMzHrDZbMS8-unsplash.jpg);
+}
+.inner-img .two {
+    background-image: url(/img/ian-dooley-hpTH5b6mo2s-unsplash.jpg);
+}
+.inner-img .three {
+    background-image: url(/img/julia-solonina-Ek7BFRCGYe0-unsplash.jpg);
+}
+.inner-img .four {
+    background-image: url(/img/julia-solonina-uXY5k9qxn_s-unsplash.jpg);
+}
+.outer-img .one {
+    background-image: url(/img/danny-jongerius-uMzHrDZbMS8-unsplash.jpg);
+}
+.outer-img .two {
+    background-image: url(/img/ian-dooley-hpTH5b6mo2s-unsplash.jpg);
+}
+.outer-img .three {
+    background-image: url(/img/julia-solonina-Ek7BFRCGYe0-unsplash.jpg);
+}
+.outer-img .four{
+    background-image: url(/img/julia-solonina-uXY5k9qxn_s-unsplash.jpg);
+}
+
+.left-btn, .right-btn {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+}
+.left-btn {
+    left: 10%;
+    transform: translate(-100%, -50%);
+}
+.right-btn {
+    right: 10%;
+    transform: translate(100%, -50%);
+}
+.left-btn button, .right-btn button {
+    height: 100px;
+    width: 40px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: tomato;
+}
+.left-btn button {
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+.right-btn button {
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+
